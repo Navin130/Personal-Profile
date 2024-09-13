@@ -1,0 +1,162 @@
+body{
+    color: hwb(195 11% 87%);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:var(--bg-color) ;
+    color: var(--text-color);
+    transition: backgrount-color 0.3s , color 0.3s;
+}
+:root{
+    --bg-color: #f0f0f5;
+    --text-color: #000;
+
+}
+
+[data-theme="dark"]
+{
+    --bg-color:#1f1f1f;
+    --text-color:#f0f0f5;
+
+}
+header{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0f0f5;
+    transition: backgrount-color 0.3s ;
+
+}
+[data-theme="dark"] header{
+    background-color: #333;
+
+}
+
+.logo h1{
+    margin: 0;
+    font-size: 24px;
+    color: red;
+}
+ 
+.logo h1 samp{
+    color: var(--text-color);
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 15px ;
+}
+
+.theme-toggle{
+    cursor: pointer;
+}
+
+nav ul a {
+    text-decoration: none;
+    color:var(--text-color);
+    font-weight: bold;
+}
+
+.theme-toggle i{
+    font-size: 24px;
+    color: var(--text-color);
+    transition: color 03s;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: var(--bg-color);
+}
+.hero-content{
+    max-width: 50%;
+}
+
+.hero-content h2{
+    font-size: 48px;
+    margin: 0;
+    color: var(--text-color);
+}
+.hero-content h2 samp{
+    color: #ff5a33;
+}
+.hero-content p
+{
+    font-size: 18px;
+    margin: 20px 0 ;
+}
+
+.download-cv{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 5px ;
+    font-weight: bold;
+}
+
+.social-icons a{
+margin: 0 10px;
+color: var(--text-color);
+font-size: 24px;
+}
+ 
+.hero-image img{
+    max-width: 96%;
+
+}
+@media screen  and (max-width:1024px){
+    
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content{
+        max-width: 100%;
+        margin: 30px;
+    }
+    .hero-image{
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+@media  screen and (max-width : 768px) {
+    
+    header{
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 20px;
+
+    }
+     nav ul{
+        flex-direction: column;
+        align-items: center;
+     }
+     nav ul li {
+
+        margin: 10px 0 ;
+     }
+     .theme-toggle{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+     }
+     .hero-content h2 {
+        font-size: 36px ;
+     }
+     .hero-content p{
+        font-size: 16px;
+     }
+    
+    
+}
